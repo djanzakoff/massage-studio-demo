@@ -10,7 +10,7 @@ make(k){const M=(c)=>this.mat(c);if(k==='body'){
 this.camera.position.set(0,0,9.2);this.group.position.y=-.08;
 const skin=this.mat('#b6b9a8',.18,.52),goldMat=this.mat(gold,.5,.24);
 const bodypart=(name,geometry,x,y,z=0,scale=[1,1,1],rotation=0)=>{
-const o=this.add(geometry,skin,x,y,z);o.scale.set(...scale);o.rotation.z=rotation;o.userData.zone=name;this.zoneMeshes.push(o);return o};
+const o=this.add(geometry,skin.clone(),x,y,z);o.scale.set(...scale);o.rotation.z=rotation;o.userData.zone=name;this.zoneMeshes.push(o);return o};
 bodypart('Голова',new T.SphereGeometry(.36,32,24),0,1.78,0,[.85,1.2,.78]);
 bodypart('Шея',new T.CylinderGeometry(.17,.2,.38,32),0,1.30,0);
 bodypart('Грудь и плечи',new T.SphereGeometry(.65,36,24),0,.79,0,[1.35,.65,.62]);
